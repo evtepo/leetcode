@@ -12,13 +12,11 @@ class Solution:
 
         nodes = []
         current = head
-
         while current:
             nodes.append(current)
             current = current.next
 
         sorted_nodes = self.quick_sort(nodes)
-
         for i in range(1, len(sorted_nodes)):
             sorted_nodes[i - 1].next = sorted_nodes[i]
 
