@@ -7,6 +7,10 @@ import (
 func isPalindrome(x int) bool {
 	val := f.Sprint(x)
 	var left, right int = 0, len(val) - 1
+	if right <= 0 {
+		return true
+	}
+
 	for left < right {
 		if val[left] != val[right] {
 			return false
@@ -22,5 +26,5 @@ func isPalindrome(x int) bool {
 
 
 func main() {
-	f.Println(isPalindrome(-121))
+	f.Println(isPalindrome(1))
 }
